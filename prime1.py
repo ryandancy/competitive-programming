@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""SPOJ Problem 2: PRIME1 - Prime Generator"""
+"""PRIME1 - Prime Generator"""
 
 from math import sqrt, ceil
 
