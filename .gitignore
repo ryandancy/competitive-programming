@@ -119,6 +119,7 @@ dmypy.json
 .venv/
 
 ### Visual Studio Code ###
+.vscode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -129,3 +130,6 @@ dmypy.json
 ### Visual Studio Code Patch ###
 # Ignore all local history of files
 .history
+
+# Input files
+inp.txt
