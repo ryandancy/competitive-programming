@@ -9,7 +9,7 @@
 using namespace std;
 
 int S[100];
-unordered_map<long long, long long> abc;
+unordered_map<long long, long long> abc(1000000);
 
 int main() {
   int N;
