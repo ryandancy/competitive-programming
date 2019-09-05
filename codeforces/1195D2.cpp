@@ -1,28 +1,42 @@
-// 1195D2 - Submarines in the Rybinsk Sea (easy)
-// Since all a_i are the same length, we can compute how much is added to the total
-// by each digit independently. O(nd) where d is the number of digits in each a_i.
+// 1195D2 - Submarines in the Rybinsk Sea (hard)
+// Same general idea as 1195D1, but we keep track of the count of elements with each number of digits
+// and handle each separately. O(nd), where d is the number of digits per a_i, again, but with a
+// constant factor of 10 on 1195D1. (Really, it's O(n) since d is small.)
 #include <bits/stdc++.h>
-#define MOD 998244353LL
-typedef long long ll;
+#define MOD 998244353
 using namespace std;
+typedef long long ll;
+string a[100000];
+ll cnt[11] = {0};
 int main() {
   ios::sync_with_stdio(false);
   cin.tie(0);
   ll n;
   cin >> n;
-  ll res = 0;
-  string s;
-  int digs = -1;
   for (int i = 0; i < n; i++) {
-    cin >> s;
-    if (digs == -1) digs = s.size();
-    ll fac = 1;
-    for (int j = 0; j < digs; j++, fac *= 100LL) {
-      ll dig = s[digs-j-1]-'0';
-      res += ((fac%MOD * dig)%MOD * n)%MOD;
-      res %= MOD;
-      res += ((fac%MOD * 10LL * dig)%MOD * n)%MOD;
-      res %= MOD;
+    cin >> a[i];
+    cnt[a[i].size()]++;
+  }
+  ll res = 0;
+  for (int i = 0; i < n; i++) {
+    for (int k = 1; k <= 10; k++) {
+      ll fac = 1;
+      for (int j = 0; j < a[i].size(); j++) {
+        ll dig = a[i][a[i].size()-j-1] - '0';
+        if (j < k) {
+          res += ((fac%MOD * dig)%MOD * cnt[k])%MOD;
+          res %= MOD;
+          res += ((fac%MOD * 10LL * dig)%MOD * cnt[k])%MOD;
+          res %= MOD;
+          fac *= 100LL;
+          fac %= MOD;
+        } else {
+          res += ((fac%MOD * dig)%MOD * cnt[k] * 2LL)%MOD;
+          res %= MOD;
+          fac *= 10LL;
+          fac %= MOD;
+        }
+      }
     }
   }
   cout << res << endl;
