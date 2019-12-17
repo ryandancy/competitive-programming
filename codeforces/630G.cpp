@@ -1,7 +1,7 @@
 // 630G - Challenge Pennants
-// The number of partitions of n items into exactly k boxes is binom(n-1, k-1).
+// The number of compositions of n items into exactly k boxes is binom(n-1, k-1).
 // The number of ways to choose k out of n boxes is binom(n, k).
-// For each type of pennant, we calculate ways to choose n boxes * ways to partition into
+// For each type of pennant, we calculate ways to choose n boxes * ways to compose into
 // those boxes for each n, then multiply together. O(n) to calculate the binomials.
 #include <bits/stdc++.h>
 using namespace std;
