@@ -131,8 +131,8 @@ dmypy.json
 # Ignore all local history of files
 .history
 
-# Input files & test case generator
-inp*.txt
+# Input files, test case generator, output files
+*.txt
 temp.py
 
 ### C++ ###
