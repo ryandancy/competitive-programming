@@ -168,3 +168,6 @@ temp.py
 *.exe
 *.out
 *.app
+
+# Valgrind crud
+*.dSYM/
