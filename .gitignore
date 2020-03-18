@@ -135,6 +135,9 @@ dmypy.json
 *.txt
 temp.py
 
+# Books
+cp3.pdf
+
 ### C++ ###
 # Prerequisites
 *.d
