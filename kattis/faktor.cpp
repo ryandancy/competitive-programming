@@ -20,5 +20,8 @@ int main() {
 #ifdef DEBUG
   freopen("inp.txt", "r", stdin);
 #endif
-  
+  int a, i;
+  cin>>a>>i;
+  debug("HELLO");
+  cout<<a*(i-1)+1<<'\n';
 }
