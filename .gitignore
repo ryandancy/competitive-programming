@@ -134,6 +134,7 @@ dmypy.json
 # Input files, test case generator, output files
 *.txt
 temp.py
+valid.py
 
 # Books
 cp3.pdf
