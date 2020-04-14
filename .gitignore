@@ -135,6 +135,7 @@ dmypy.json
 *.txt
 temp.py
 valid.py
+interact.py
 
 # Books
 cp3.pdf
