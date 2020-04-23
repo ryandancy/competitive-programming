@@ -1,4 +1,4 @@
-// Tree Isomorphism I - are two trees isomorphic?
+// Tree Isomorphism I - are two rooted trees isomorphic?
 // We recursively compute a hash for each tree which doesn't take into account
 // the labels or the orders of children. Probably a bit overkill, but it's ok.
 // Time complexity: O(n)
