@@ -7,7 +7,7 @@
 using namespace std;
 typedef long long ll;
 
-ll st[4000001]; // double size + 1
+ll st[4000001]; // quadruple size + 1 is safest
 int n, o, q;
 
 ll sum(int a, int b) {
