@@ -1,5 +1,5 @@
 // Simple range sum queries with a static segment tree in O(n log n + q log n).
-// Can also be done with a BIT.
+// Can also be done with a BIT, or even prefix sums in O(n + q) lol.
 #include <bits/stdc++.h>
 
 using namespace std;
