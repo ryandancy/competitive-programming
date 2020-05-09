@@ -6,7 +6,6 @@
 #include <stack>
 #include <map>
 #include <set>
-#include <cassert>
 #include <cmath>
 #include <cstdio>
 #include <algorithm>
@@ -31,5 +30,14 @@ int main() {
 #ifndef ONLINE_JUDGE
   freopen("inp.txt", "r", stdin);
 #endif
-  
+  map<string, int> m;
+  string s;
+  int tot=0;
+  while (getline(cin, s)) {
+    m[s]++;
+    tot++;
+  }
+  for (map<string, int>::iterator it = m.begin(); it != m.end(); ++it) {
+    printf("%s %.4lf\n", it->first.c_str(), ((double) it->second / (double) tot) * 100.0);
+  }
 }
