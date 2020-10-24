@@ -4,7 +4,7 @@
 #define EPS 1e-9
 #define PI 3.1415926535897932384626433832795L
 #ifndef DEBUG
-#define debug(args...)
+#define debug(args...) (0)
 #else
 #include "debug.h"
 #endif
