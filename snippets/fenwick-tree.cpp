@@ -10,6 +10,7 @@ typedef long long ll;
 // -----------             -------------
 // -----------------------
 // -----------------------------------------------------
+// Basically prefix sums with O(log n) query and update.
 // See CP3 2.4.4.
 
 // add(x, v) adds v to index x in O(log n).
@@ -35,4 +36,9 @@ ll sum(ll x) { // O(log n) sum [0, x)
     x-=x&-x;
   }
   return res;
+}
+
+// setup fenwick tree, should be done in main
+void setup(ll a[N]) {
+  for (ll i=0;i<N;i++) add(i,a[i]);
 }
