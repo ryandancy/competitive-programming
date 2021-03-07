@@ -9,22 +9,22 @@ typedef long long ll;
 
 // find(x) returns the representative for the set where x is.
 // unite(x, y) merges the sets containing x and y.
-// Time complexity for both: O(n*a(n)) where a(n) is the inverse Ackermann function, a(n) <= 5 for practical use.
+// Time complexity for both: O(a(n)) where a(n) is the inverse Ackermann function, a(n) <= 5 for practical use.
 
 #define N 100000
 
 ll uf[N], sz[N];
 
 // initialize the union find array, should be done in main
-void init() {
+void init() { // O(n)
   for (ll i=0;i<N;i++) uf[i]=i,sz[i]=1;
 }
 
-ll find(ll x) {
+ll find(ll x) { // O(a(n))
   return uf[x]==x?x:uf[x]=find(x);
 }
 
-void unite(ll x, ll y) {
+void unite(ll x, ll y) { // O(a(n))
   x=find(x),y=find(y);
   if (x==y) return;
   if (sz[x]<sz[y]) swap(x,y);
