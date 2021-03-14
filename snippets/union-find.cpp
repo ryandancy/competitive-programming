@@ -21,7 +21,7 @@ void init() { // O(n)
 }
 
 ll find(ll x) { // O(a(n))
-  return uf[x]==x?x:uf[x]=find(x);
+  return uf[x]==x?x:uf[x]=find(uf[x]);
 }
 
 void unite(ll x, ll y) { // O(a(n))
