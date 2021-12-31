@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+using namespace std;
 typedef long long ll;
 
 // Union-find (disjoint-set union, union-find disjoint set) models disjoint sets of ints [0, N).

@@ -41,6 +41,5 @@ int main() {
   for (ll i=0;i<n;i++) {
     r+=df[i];
     cout<<r<<(i==n-1?'\n':' ');
-    // debug(df[i]);
   }
 }
